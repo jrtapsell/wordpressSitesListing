@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Sites Listing
 */
 function multisites($args) {
-    return 'DEMO';
+    return json_encode(get_sites());
 }
 add_shortcode( 'multisites', 'multisites' );
 ?>
