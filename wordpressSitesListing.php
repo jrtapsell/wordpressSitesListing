@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Sites Listing
 */
 function multisites($args) {
-    $data = ''
+    $data = '';
     foreach(get_sites() as $site) {
         data = data + json_encode($site);
         data = data + '<br>';
