@@ -13,7 +13,7 @@ function multisites($args) {
     	$blog_name = $blog_details->blogname;
 
 
-        $data = $data . '<a href="'.$url.'"><img src="' . $url . '"/>'.$blog_name.'</a><br>';
+        $data = $data . '<a href="'.$url.'"><img src="' . $url . '">'.$blog_name.'</a><br>';
     }
     return $data;
 }
