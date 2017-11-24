@@ -6,11 +6,14 @@ function multisites($args) {
     $data = '';
     foreach(get_sites() as $site) {
     	$blog_id = $site->blog_id;
-        $data = $data . json_encode(get_blog_details($blog_id));
-        $data = $data . '<br>';
-        $data = $data . get_site_icon_url(512, '', $blog_id);
-        $data = $data . '<br>';
-        $data = $data . '<hr>';
+
+    	$site_icon = get_site_icon_url(64, '', $blog_id);
+    	$blog_details = get_blog_details($blog_id);
+    	$url = $blog_details->siteurl;
+    	$blog_name = $blog_details->blogname;
+
+
+        $data = $data . '<a href="'.$url.'"><img src="' . $url . '"/>'.$blog_name.'</a><br>'
     }
     return $data;
 }
